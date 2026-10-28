@@ -1,0 +1,78 @@
+/* A votação tem cara de cartaz de festa do interior: papel, tinta e vermelho de celeiro. */
+.pagina {
+  width: min(1120px, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 4rem) 0 3.5rem;
+  min-height: calc(100vh - 180px);
+}
+
+.pagina-cabecalho { max-width: 760px; margin: 0 auto 2.5rem; text-align: center; }
+.sobretitulo { display: inline-block; margin-bottom: .85rem; color: var(--palha); font-size: .76rem; font-weight: 800; letter-spacing: .19em; text-transform: uppercase; }
+.pagina-cabecalho h1 { font-size: clamp(2rem, 5vw, 3.6rem); color: var(--papel); text-shadow: 3px 4px 0 rgba(0,0,0,.22); }
+.pagina-cabecalho p { margin: 1rem auto 0; max-width: 58ch; color: #f3dfb4; font-size: 1.05rem; line-height: 1.65; }
+.secao-roca, .secao-fora-roca { margin-top: 2.8rem; }
+.secao-titulo { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; margin-bottom: 1.1rem; padding-bottom: .8rem; border-bottom: 1px solid rgba(242,207,115,.35); }
+.secao-titulo h2 { color: var(--palha); font-size: clamp(1.25rem, 3vw, 1.65rem); }
+.secao-titulo > span { color: #e6cfa2; font-size: .82rem; font-weight: 800; }
+.grade-roca { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.grade-participantes { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1rem; }
+.participante-card { position: relative; overflow: hidden; color: var(--tinta); background: var(--papel); border: 2px solid rgba(43,26,12,.6); border-radius: 12px 12px 5px 5px; box-shadow: 0 10px 20px rgba(0,0,0,.2); transition: transform .2s ease, box-shadow .2s ease; }
+.participante-card:hover { transform: translateY(-4px) rotate(-.2deg); box-shadow: 0 16px 28px rgba(0,0,0,.3); }
+.card-roca { border: 4px solid var(--celeiro); }
+.participante-foto-wrap { position: relative; background: #bca783; overflow: hidden; }
+.participante-foto { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.selo-roca { position: absolute; top: .8rem; left: .8rem; padding: .35rem .7rem; background: var(--celeiro); color: #fff8e8; border: 1px solid rgba(255,255,255,.65); border-radius: 3px; font-size: .72rem; font-weight: 900; letter-spacing: .09em; text-transform: uppercase; transform: rotate(-3deg); box-shadow: 2px 3px 0 rgba(0,0,0,.25); }
+.participante-info { padding: 1rem; }
+.participante-info h3 { min-height: 1.35em; font-family: var(--fonte-texto); font-size: 1.05rem; font-weight: 800; }
+.card-fora .participante-info { padding: .8rem .85rem; }
+.card-fora .participante-info h3 { font-size: .95rem; }
+.botao-votar { display: flex; align-items: center; justify-content: space-between; width: 100%; margin-top: .9rem; background: var(--celeiro); color: white; box-shadow: 0 3px 0 #78211b; }
+.botao-votar span { font-size: 1.25rem; }
+.aviso-voto { display: flex; align-items: flex-start; gap: 1rem; max-width: 760px; margin: 0 auto 2rem; padding: 1.2rem 1.35rem; border: 1px solid #d9b85d; border-left: 5px solid var(--pasto); border-radius: 8px; color: var(--tinta); background: #f8edcf; box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+.aviso-icone { display: grid; flex: 0 0 2.2rem; width: 2.2rem; height: 2.2rem; place-items: center; border-radius: 50%; background: var(--pasto); color: white; font-weight: 900; }
+.aviso-voto strong { font-family: var(--fonte-titulo); font-size: 1.1rem; }
+.aviso-voto p { margin: .35rem 0 .55rem; line-height: 1.5; }
+.aviso-voto a { color: #7c211b; font-weight: 900; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.mensagem-erro { padding: .8rem 1rem; color: #fff; background: #8c201b; border-radius: 6px; }
+.resumo-votos { display: flex; flex-direction: column; align-items: center; width: min(100%, 360px); margin: 0 auto 2.2rem; padding: 1.5rem; color: var(--tinta); background: var(--palha); border: 3px solid #d0a74b; outline: 1px solid rgba(255,255,255,.25); box-shadow: 8px 8px 0 rgba(0,0,0,.16); transform: rotate(-1deg); }
+.resumo-label { font-size: .8rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+.resumo-votos strong { font-family: var(--fonte-titulo); font-size: 3.4rem; line-height: 1.2; }
+.resumo-nota { font-size: .78rem; opacity: .75; }
+.resultado-vazio { max-width: 650px; margin: 0 auto; padding: clamp(1.8rem, 5vw, 3.5rem); text-align: center; color: var(--tinta); background: var(--papel); border: 3px dashed #c5a76d; border-radius: 8px; box-shadow: 10px 10px 0 rgba(0,0,0,.16); }
+.vazio-ilustracao { color: var(--celeiro); font-size: 2.8rem; }
+.resultado-vazio h2 { margin-top: .5rem; font-size: clamp(1.35rem, 3vw, 1.8rem); }
+.resultado-vazio p { margin: .8rem 0 1.4rem; line-height: 1.6; }
+.placar-lista { display: grid; gap: 1rem; }
+.placar-item { display: grid; grid-template-columns: 42px 110px minmax(0, 1fr) 100px; align-items: center; gap: 1rem; padding: 1rem; color: var(--tinta); background: var(--papel); border: 2px solid rgba(43,26,12,.5); border-radius: 8px; box-shadow: 5px 6px 0 rgba(0,0,0,.14); }
+.placar-lider { border: 3px solid var(--palha); background: #fff0c8; }
+.placar-posicao { font-family: var(--fonte-titulo); font-size: 1.3rem; color: #8c6a35; text-align: center; }
+.placar-foto { width: 110px; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 4px; }
+.placar-nome-linha { display: flex; align-items: center; flex-wrap: wrap; gap: .6rem; margin-bottom: .8rem; }
+.placar-nome-linha h2 { font-family: var(--fonte-texto); font-size: 1.05rem; font-weight: 900; }
+.selo-lider { padding: .25rem .5rem; color: white; background: var(--celeiro); border-radius: 3px; font-size: .67rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+.barra { height: 12px; overflow: hidden; background: #d9c9a8; border: 1px solid #c6b38c; border-radius: 99px; }
+.barra-preenchida { height: 100%; min-width: 0; background: linear-gradient(90deg, #9b2c24, #c94732); border-radius: inherit; transition: width .65s cubic-bezier(.2,.75,.25,1); }
+.placar-numeros { display: flex; flex-direction: column; align-items: flex-end; gap: .1rem; }
+.placar-numeros strong { font-family: var(--fonte-titulo); font-size: 1.4rem; white-space: nowrap; }
+.placar-numeros span { font-size: .8rem; opacity: .75; }
+.placar-acoes { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; margin-top: 1rem; }
+.botao-zerar { background: transparent; color: #f4d9bc; box-shadow: inset 0 0 0 1px rgba(244,217,188,.55); }
+.pagina-nao-encontrada { text-align: center; }
+.pagina-nao-encontrada p { margin: 1rem 0; }
+
+@media (max-width: 650px) {
+  .pagina { width: min(100% - 1.25rem, 1120px); }
+  .secao-titulo { align-items: flex-start; flex-direction: column; gap: .3rem; }
+  .grade-roca { grid-template-columns: 1fr; }
+  .grade-participantes { grid-template-columns: repeat(auto-fill, minmax(145px, 1fr)); gap: .7rem; }
+  .placar-item { grid-template-columns: 28px 76px minmax(0, 1fr); gap: .65rem; padding: .7rem; }
+  .placar-foto { width: 76px; }
+  .placar-nome-linha { gap: .4rem; margin-bottom: .55rem; }
+  .placar-nome-linha h2 { font-size: .92rem; }
+  .placar-numeros { grid-column: 3; flex-direction: row; align-items: baseline; gap: .55rem; }
+  .placar-numeros strong { font-size: 1.1rem; }
+  .placar-numeros span { font-size: .75rem; }
+  .placar-posicao { font-size: 1rem; }
+  .placar-acoes { flex-direction: column; }
+  .placar-acoes .botao { text-align: center; }
+}
